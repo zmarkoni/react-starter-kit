@@ -1,0 +1,5 @@
+Build Production package, "dist" folder fill be created
+npm run build:prod
+
+Run app in development mode
+npm run start

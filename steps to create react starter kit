@@ -1,7 +1,7 @@
 Webpack Docs: https://webpack.js.org/concepts/
 More about Babel: https://babeljs.io/
 
-// set up npm
+// setUp npm
 npm init
 npm install --save-dev webpack@3 webpack-dev-server
 
@@ -45,9 +45,13 @@ npm install --save-dev html-webpack-plugin
 
 for webpack production, just duplicate webpack.config.js and rename to webpack.config.prod.js
 There we need to change just mode and devtools
-Also just add script command in pckage.json like build:prod
-Using with
+Also just add script command in package.json like build:prod
+
+To check if NPM packages need update -> https://flaviocopes.com/update-npm-dependencies/
+ncu -u
+
+Build Production package, "dist" folder fill be created
 npm run build:prod
 
-For development
+Run app in development mode
 npm run start

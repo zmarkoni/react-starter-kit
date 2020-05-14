@@ -22,17 +22,17 @@ module.exports = {
                 exclude: '/node_modules/'
             },
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 exclude: '/node_modules/',
                 use: [
                     { loader: 'style-loader' }, // injecting css code
                     { loader: 'css-loader', // resolve imports
-                        options: {
+                        /* options: {
                             importLoaders: 1,
                             modules: {
                                 localIdentName: '[name]__[local]__[hash:base64:5]' // name of generated CSS classes in the DOM
                             }
-                        }
+                        } */
                     },
                     { loader: 'postcss-loader', // prefix css for other browsers
                         options: {
@@ -45,6 +45,22 @@ module.exports = {
             {
                 test: /\.(png|jpg?g|gif)$/,
                 loader: 'url-loader?limit=8000&name=images/[name].[ext]'
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
             }
         ]
     },

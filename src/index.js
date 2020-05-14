@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
+import configureGlobalStore from "./hooks-store/global-store";
 
-const app = (
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+configureGlobalStore();
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
 );
-
-ReactDOM.render(app, document.getElementById('root'));

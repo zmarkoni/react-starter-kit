@@ -1,0 +1,53 @@
+Webpack Docs: https://webpack.js.org/concepts/
+More about Babel: https://babeljs.io/
+
+// set up npm
+npm init
+npm install --save-dev webpack@3 webpack-dev-server
+
+// create src/index.html
+npm install --save react react-dom react-router-dom
+
+// configure package.json
+"start": "webpack-dev-server"
+
+npm install --save-dev webpack-cli
+
+// now we can configure base webpack here
+// react-the-complete-guide-create-react-app-setup-manually/webpack.config.js
+
+// configure babel
+npm install --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/preset-stage-2 babel-loader @babel/plugin-proposal-class-properties
+
+// add .babelrc.js file
+// "presets" need to be double quotes and need to be array
+// "useBuiltIns": "usage" // babel-polyfill
+
+https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8295932#announcements
+The Babel docs explain how you can take advantage of Babel's built-in "Polyfill auto injecting" feature: https://babeljs.io/docs/en/babel-polyfill
+npm install --save core-js
+npm install --save regenerator-runtime
+
+// support CSS
+npm install --save-dev style-loader css-loader
+npm install --save-dev postcss-loader
+npm install --save-dev autoprefixer
+
+// add browserslist in package.json
+Copy from babelrc
+
+// add support for images
+npm install --save-dev url-loader
+npm install --save-dev file-loader
+
+//import js,css... in index.html
+npm install --save-dev html-webpack-plugin
+
+for webpack production, just duplicate webpack.config.js and rename to webpack.config.prod.js
+There we need to change just mode and devtools
+Also just add script command in pckage.json like build:prod
+Using with
+npm run build:prod
+
+For development
+npm run start

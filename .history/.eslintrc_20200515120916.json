@@ -5,13 +5,12 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -20,7 +19,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react-hooks"
+        "react"
     ],
     "rules": {
         "import/extensions": "off",

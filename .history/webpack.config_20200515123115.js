@@ -4,9 +4,6 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    devServer: {
-        host: '0.0.0.0'
-    },
     mode: 'development',
     entry: './src/index.js',
     output: {
@@ -19,19 +16,19 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map', // generate source maps
     module: {
         rules: [
-            /* {
+            {
                 test: /\.js$/,
                 enforce: 'pre',
                 loader: ['eslint-loader'],
-                exclude: '/node_modules/',
-            }, */
-            {
-                test: /\.js$/,
-                loader: ['babel-loader'],
                 exclude: '/node_modules/'
             },
             {
-                test: /\.(sa|sc|c)ss$/,
+                test: /\.js$/,
+                loader: ['babel-loader', 'eslint-loader'],
+                exclude: '/node_modules/'
+            },
+            {
+                test: /\.css$/i,
                 exclude: '/node_modules/',
                 use: [
                     { loader: 'style-loader' }, // injecting css code
@@ -43,7 +40,6 @@ module.exports = {
                             }
                         } */
                     },
-                    {loader: 'sass-loader'},
                     { loader: 'postcss-loader', // prefix css for other browsers
                         options: {
                             indent: 'postcss',

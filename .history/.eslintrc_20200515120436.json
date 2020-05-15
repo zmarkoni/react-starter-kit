@@ -3,15 +3,15 @@
         "browser": true,
         "es6": true
     },
+    "parser": "babel-eslint",
     "extends": [
         "eslint:recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -20,7 +20,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react-hooks"
+        "react"
     ],
     "rules": {
         "import/extensions": "off",

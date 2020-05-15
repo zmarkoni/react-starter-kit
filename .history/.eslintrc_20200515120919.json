@@ -5,7 +5,7 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -20,7 +20,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react-hooks"
+        "react"
     ],
     "rules": {
         "import/extensions": "off",

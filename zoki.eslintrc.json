@@ -19,9 +19,6 @@
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "plugins": [
-        "react-hooks"
-    ],
     "rules": {
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",

@@ -2,6 +2,7 @@
 const path = require('path'); // provided automatically for constructing absolute path
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
     devServer: {
@@ -19,12 +20,12 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map', // generate source maps
     module: {
         rules: [
-            /* {
-                test: /\.js$/,
+            {
                 enforce: 'pre',
-                loader: ['eslint-loader'],
+                test: /\.(js|jsx)$/,
                 exclude: '/node_modules/',
-            }, */
+                loader: 'eslint-loader'
+            },
             {
                 test: /\.js$/,
                 loader: ['babel-loader'],
@@ -80,6 +81,10 @@ module.exports = {
             filename: 'index.html',
             inject: 'body',
 
-        })
+        }),
+        //new StylelintPlugin({
+        //    configFile: __dirname + '/.stylelintrc',
+        //    files: '**/*.(sa|sc|c)ss'
+       // }) 
     ]
 };

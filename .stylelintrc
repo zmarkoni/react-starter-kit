@@ -41,12 +41,12 @@
     "declaration-property-unit-whitelist": {
       "font-size": ["px", "em"]
     },
-    'at-rule-no-unknown': [true, {
-      ignoreAtRules: ['function', 'if', 'each', 'else', 'for', 'include', 'mixin', 'return', 'warn']
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ['function', 'if', 'each', 'else', 'for', 'include', 'mixin', 'return', 'warn']
     }],
-    'plugin/stylelint-no-unsupported-browser-features': [true, {
-      severity: 'warning',
-      ignore: ['css3-cursors', 'outline', 'object-fit', 'css-sticky', 'css-appearance', 'css-mixblendmode', 'word-break', 'user-select-none', 'css-resize', 'viewport-units', 'multicolumn', 'calc', 'rem', 'flexbox', 'css-filters', 'css-hyphens']
+    "plugin/stylelint-no-unsupported-browser-features": [true, {
+      "severity": "warning",
+      "ignore": ['css3-cursors', 'outline', 'object-fit', 'css-sticky', 'css-appearance', 'css-mixblendmode', 'word-break', 'user-select-none', 'css-resize', 'viewport-units', 'multicolumn', 'calc', 'rem', 'flexbox', 'css-filters', 'css-hyphens']
     }]
   }
 }
